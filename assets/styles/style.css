@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;  
+}
+
+@media screen and (min-width:768px) and (max-width: 1023px) {
+    .container {
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "main-container main-container main-container";
+        font-size: 1.5em;
+    }
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 15% 1fr 15%;
+    grid-template-areas:
+    "header header header"
+    "main-container main-container main-container"
+    "footer footer footer";
+    font-size: 1.5em;
+}
+
+.main-container {
+    display: grid;
+    border: 1px solid black;
+    width: 100vw;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "main aside";
+    font-size: 1em;
+}
+
+.aside {
+    background-color:rgb(180, 194, 238);
+    text-align: center;
+    padding-top: 2%; 
+}
+
+.main {
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "main main"
+    "main main"
+    "main main"
+    "main main"
+    "more1 more2"
+    "more3 more3";
+    text-align: center;
+    padding-top: 1%;
+     
+}
+
+.more1 {
+    grid-area: more1;
+}
+
+.more2 {
+    grid-area: more2;
+}
+
+.more3 {
+    grid-area: more3;
+}
+
+.more1, .more2, .more3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    border: 1px solid black;
+    margin: 0.4em;   
+}
+
+.header {
+    display: grid;
+    grid-area: header;
+    background-color: aqua;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    }
+
+
+.footer {
+    display: grid;
+    grid-area: footer;
+    background-color: aqua;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 1%;
+    padding-left: 1%;    
+    }
+
+.footer-section {
+    display: grid;
+    background-color: gray;
+    padding: 3%;
+    height: 80%;
+    justify-items: center;
+    align-items: center;    
+}
