@@ -48,15 +48,14 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: 
-    "main main"
-    "main main"
-    "main main"
-    "main main"
+    "main-text main-text"
+    "main-text main-text"
+    "main-text main-text"
+    "main-text main-text"
     "more1 more2"
     "more3 more3";
     text-align: center;
     padding-top: 1%;
-     
 }
 
 .more1 {
@@ -80,6 +79,10 @@
     margin: 0.4em;   
 }
 
+.main-text {
+    grid-area: main-text;
+    justify-content: center;
+}
 .header {
     display: grid;
     grid-area: header;
